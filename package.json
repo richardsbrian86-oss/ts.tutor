@@ -1,0 +1,30 @@
+{
+  "name": "ts-tutor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A CLI tutor agent that teaches TypeScript by reading real code with you.",
+  "type": "module",
+  "bin": {
+    "tutor": "./dist/cli.js"
+  },
+  "scripts": {
+    "tutor": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=20.11"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.0",
+    "zod": "^3.25.0",
+    "zod-to-json-schema": "^3.25.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
