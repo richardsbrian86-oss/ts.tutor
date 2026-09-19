@@ -1,0 +1,6 @@
+{
+  // `npm run build` - same settings as tsconfig.json, but it skips the tests
+  // so they never end up in dist/.
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "dist", "sandbox", "src/**/*.test.ts", "src/__tests__/**"]
+}

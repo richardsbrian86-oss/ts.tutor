@@ -1,0 +1,30 @@
+{
+  // The base config: used by `npm run typecheck` and by your editor.
+  // Every option below is deliberately strict - learning TypeScript with the
+  // safety rails switched off teaches you the wrong lessons.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+
+    // --- Strictness ---------------------------------------------------
+    "strict": true,                        // turns on the whole strict family at once
+    "noUncheckedIndexedAccess": true,      // arr[0] is T | undefined, which is the truth
+    "exactOptionalPropertyTypes": true,    // `foo?: string` != `foo: string | undefined`
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,          // forces `import type` where it belongs
+
+    // --- Output -------------------------------------------------------
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": true,
+    "declaration": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "sandbox"]
+}
